@@ -1,7 +1,7 @@
 using DesafioVWFS.Application.Features.Payments.InsertPayment.Models;
 using DesafioVWFS.Application.Shared.Core;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
-using DesafioVWFS.Application.Shared.Domain.Services;
+using DesafioVWFS.Application.Shared.Repository;
+using DesafioVWFS.Application.Shared.Services;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 

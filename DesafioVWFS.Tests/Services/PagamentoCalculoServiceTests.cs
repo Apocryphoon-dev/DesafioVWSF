@@ -1,4 +1,4 @@
-using DesafioVWFS.Application.Services;
+using DesafioVWFS.Application.Shared.Services;
 
 namespace DesafioVWFS.Tests.Services;
 

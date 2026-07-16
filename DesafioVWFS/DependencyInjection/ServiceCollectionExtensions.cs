@@ -1,11 +1,22 @@
 using DesafioVWFS.Application.Features.Clients;
+using DesafioVWFS.Application.Features.Clients.GetSummary.Handlers;
 using DesafioVWFS.Application.Features.Contracts;
+using DesafioVWFS.Application.Features.Contracts.CreateContract.Handlers;
+using DesafioVWFS.Application.Features.Contracts.CreateContract.Models;
+using DesafioVWFS.Application.Features.Contracts.CreateContract.Validators;
+using DesafioVWFS.Application.Features.Contracts.DeleteContract.Handlers;
+using DesafioVWFS.Application.Features.Contracts.GetContract.UseCase;
+using DesafioVWFS.Application.Features.Contracts.ListContracts.Handlers;
 using DesafioVWFS.Application.Features.Payments;
-using DesafioVWFS.Application.Repositories;
-using DesafioVWFS.Application.Services;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
-using DesafioVWFS.Application.Shared.Domain.Services;
+using DesafioVWFS.Application.Features.Payments.GetPayment.Handlers;
+using DesafioVWFS.Application.Features.Payments.InsertPayment.Handlers;
+using DesafioVWFS.Application.Features.Payments.InsertPayment.Models;
+using DesafioVWFS.Application.Features.Payments.InsertPayment.Validators;
+using DesafioVWFS.Application.Features.Payments.ListPayments.Handlers;
+using DesafioVWFS.Application.Shared.Repository;
+using DesafioVWFS.Application.Shared.Services;
 using DesafioVWFS.Data;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -21,10 +32,19 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IContratoRepository, ContratoRepository>();
         services.AddScoped<IPagamentoRepository, PagamentoRepository>();
 
-        services.AddScoped<IContratoService, ContratoService>();
-        services.AddScoped<IPagamentoService, PagamentoService>();
-        services.AddScoped<IClienteService, ClienteService>();
         services.AddScoped<IPagamentoCalculoService, PagamentoCalculoService>();
+
+        services.AddScoped<CreateContractUseCase>();
+        services.AddScoped<GetContractUseCase>();
+        services.AddScoped<ListContractsUseCase>();
+        services.AddScoped<DeleteContractUseCase>();
+        services.AddScoped<InsertPaymentUseCase>();
+        services.AddScoped<ListPaymentsUseCase>();
+        services.AddScoped<GetPaymentUseCase>();
+        services.AddScoped<GetSummaryUseCase>();
+
+        services.AddScoped<IValidator<CreateContractInput>, CreateContractInputValidator>();
+        services.AddScoped<IValidator<InsertPaymentInput>, InsertPaymentInputValidator>();
 
         services.AddScoped<IContractsApplicationService, ContractsApplicationService>();
         services.AddScoped<IPaymentsApplicationService, PaymentsApplicationService>();

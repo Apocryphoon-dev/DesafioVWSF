@@ -1,7 +1,7 @@
 using DesafioVWFS.Application.Features.Contracts.GetContract.Models;
 using DesafioVWFS.Application.Shared.Core;
 using DesafioVWFS.Application.Shared.Domain.Enums;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
+using DesafioVWFS.Application.Shared.Repository;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 

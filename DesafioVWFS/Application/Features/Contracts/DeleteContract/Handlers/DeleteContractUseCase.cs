@@ -1,6 +1,6 @@
 using DesafioVWFS.Application.Features.Contracts.DeleteContract.Models;
 using DesafioVWFS.Application.Shared.Core;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
+using DesafioVWFS.Application.Shared.Repository;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 

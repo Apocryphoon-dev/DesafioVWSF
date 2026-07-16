@@ -1,4 +1,4 @@
-using DesafioVWFS.Repositories;
+using DesafioVWFS.Application.Shared.Repository;
 
 namespace DesafioVWFS.Tests.Repositories;
 

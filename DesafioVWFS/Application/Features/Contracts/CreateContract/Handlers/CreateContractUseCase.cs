@@ -2,7 +2,8 @@ using DesafioVWFS.Application.Features.Contracts.CreateContract.Models;
 using DesafioVWFS.Application.Shared.Core;
 using DesafioVWFS.Application.Shared.Domain.Entities;
 using DesafioVWFS.Application.Shared.Domain.Enums;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
+using DesafioVWFS.Application.Shared.Repository;
+using DesafioVWFS.Application.Validators;
 using FluentValidation;
 using Microsoft.Extensions.Logging;
 
@@ -25,6 +26,24 @@ public class CreateContractUseCase : UseCaseHandlerBase<CreateContractInput, Cre
     {
         var output = new Output<CreateContractOutput>();
 
+        if (!CpfCnpjValidator.ValidarCpfCnpj(input.ClienteCpfCnpj))
+        {
+            output.AddErrorMessage("CPF/CNPJ inválido");
+            return output;
+        }
+
+        if (!Enum.TryParse<TipoVeiculo>(input.TipoVeiculo, true, out var tipoVeiculo))
+        {
+            output.AddErrorMessage("Tipo de veículo inválido");
+            return output;
+        }
+
+        if (!Enum.TryParse<CondicaoVeiculo>(input.CondicaoVeiculo, true, out var condicaoVeiculo))
+        {
+            output.AddErrorMessage("Condição do veículo inválida");
+            return output;
+        }
+
         var entity = new Contrato
         {
             Id = Guid.NewGuid(),
@@ -33,8 +52,8 @@ public class CreateContractUseCase : UseCaseHandlerBase<CreateContractInput, Cre
             TaxaMensal = input.TaxaMensal,
             PrazoMeses = input.PrazoMeses,
             DataVencimentoPrimeiraParcela = input.DataVencimentoPrimeiraParcela,
-            TipoVeiculo = Enum.Parse<TipoVeiculo>(input.TipoVeiculo, true),
-            CondicaoVeiculo = Enum.Parse<CondicaoVeiculo>(input.CondicaoVeiculo, true),
+            TipoVeiculo = tipoVeiculo,
+            CondicaoVeiculo = condicaoVeiculo,
             DataCriacao = DateTime.UtcNow,
             Ativo = true
         };

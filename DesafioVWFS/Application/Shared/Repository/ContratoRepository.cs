@@ -1,9 +1,8 @@
 using DesafioVWFS.Application.Shared.Domain.Entities;
-using DesafioVWFS.Application.Shared.Domain.Repositories;
 using DesafioVWFS.Data;
 using Microsoft.EntityFrameworkCore;
 
-namespace DesafioVWFS.Repositories
+namespace DesafioVWFS.Application.Shared.Repository
 {
     public class ContratoRepository : IContratoRepository
     {
