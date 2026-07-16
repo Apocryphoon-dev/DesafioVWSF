@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DesafioVWFS.Tests/DesafioVWFS.Tests.csproj" Id="9e3008ef-641f-4f86-a8e1-07252fd8fb83" />
+  <Project Path="DesafioVWFS/DesafioVWFS.csproj" />
+</Solution>

@@ -1,0 +1,223 @@
+[2026-07-16 01:08:57 INF] Executed DbCommand (35ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:08:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:08:57 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2026-07-16 01:08:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:08:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-16 01:08:57 INF] Applying migration '20260715235729_InitialCreate'.
+[2026-07-16 01:08:57 INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE tb_contratos (
+    id_contrato uuid NOT NULL,
+    nr_cpf_cnpj_cliente character varying(18) NOT NULL,
+    vl_total numeric(18,2) NOT NULL,
+    pc_taxa_mensal numeric(5,2) NOT NULL,
+    qt_prazo_meses integer NOT NULL,
+    dt_vencimento_primeira_parcela timestamp with time zone NOT NULL,
+    tp_veiculo integer NOT NULL,
+    tp_condicao_veiculo integer NOT NULL,
+    dh_criacao timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    dh_atualizacao timestamp with time zone,
+    fl_ativo boolean NOT NULL,
+    CONSTRAINT "PK_tb_contratos" PRIMARY KEY (id_contrato)
+);
+[2026-07-16 01:08:57 INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE tb_pagamentos (
+    id_pagamento uuid NOT NULL,
+    id_contrato uuid NOT NULL,
+    vl_parcela numeric(18,2) NOT NULL,
+    vl_juros numeric(18,2) NOT NULL,
+    vl_amortizacao numeric(18,2) NOT NULL,
+    vl_saldo_devedor numeric(18,2) NOT NULL,
+    dt_vencimento timestamp with time zone NOT NULL,
+    dt_pagamento timestamp with time zone,
+    dh_criacao timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    st_pagamento integer NOT NULL,
+    ds_observacao character varying(500),
+    CONSTRAINT "PK_tb_pagamentos" PRIMARY KEY (id_pagamento),
+    CONSTRAINT "FK_tb_pagamentos_tb_contratos_id_contrato" FOREIGN KEY (id_contrato) REFERENCES tb_contratos (id_contrato) ON DELETE CASCADE
+);
+[2026-07-16 01:08:57 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_contratos_fl_ativo ON tb_contratos (fl_ativo);
+[2026-07-16 01:08:57 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_contratos_nr_cpf_cnpj_cliente ON tb_contratos (nr_cpf_cnpj_cliente);
+[2026-07-16 01:08:57 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_pagamentos_dt_vencimento ON tb_pagamentos (dt_vencimento);
+[2026-07-16 01:08:57 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_pagamentos_id_contrato ON tb_pagamentos (id_contrato);
+[2026-07-16 01:08:57 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260715235729_InitialCreate', '8.0.8');
+[2026-07-16 01:12:50 INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:50 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:50 INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+[2026-07-16 01:12:50 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:50 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-16 01:12:50 INF] Applying migration '20260715235729_InitialCreate'.
+[2026-07-16 01:12:50 INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE tb_contratos (
+    id_contrato uuid NOT NULL,
+    nr_cpf_cnpj_cliente character varying(18) NOT NULL,
+    vl_total numeric(18,2) NOT NULL,
+    pc_taxa_mensal numeric(5,2) NOT NULL,
+    qt_prazo_meses integer NOT NULL,
+    dt_vencimento_primeira_parcela timestamp with time zone NOT NULL,
+    tp_veiculo integer NOT NULL,
+    tp_condicao_veiculo integer NOT NULL,
+    dh_criacao timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    dh_atualizacao timestamp with time zone,
+    fl_ativo boolean NOT NULL,
+    CONSTRAINT "PK_tb_contratos" PRIMARY KEY (id_contrato)
+);
+[2026-07-16 01:12:50 INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE tb_pagamentos (
+    id_pagamento uuid NOT NULL,
+    id_contrato uuid NOT NULL,
+    vl_parcela numeric(18,2) NOT NULL,
+    vl_juros numeric(18,2) NOT NULL,
+    vl_amortizacao numeric(18,2) NOT NULL,
+    vl_saldo_devedor numeric(18,2) NOT NULL,
+    dt_vencimento timestamp with time zone NOT NULL,
+    dt_pagamento timestamp with time zone,
+    dh_criacao timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    st_pagamento integer NOT NULL,
+    ds_observacao character varying(500),
+    CONSTRAINT "PK_tb_pagamentos" PRIMARY KEY (id_pagamento),
+    CONSTRAINT "FK_tb_pagamentos_tb_contratos_id_contrato" FOREIGN KEY (id_contrato) REFERENCES tb_contratos (id_contrato) ON DELETE CASCADE
+);
+[2026-07-16 01:12:50 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_contratos_fl_ativo ON tb_contratos (fl_ativo);
+[2026-07-16 01:12:50 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_contratos_nr_cpf_cnpj_cliente ON tb_contratos (nr_cpf_cnpj_cliente);
+[2026-07-16 01:12:50 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_pagamentos_dt_vencimento ON tb_pagamentos (dt_vencimento);
+[2026-07-16 01:12:50 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX ix_tb_pagamentos_id_contrato ON tb_pagamentos (id_contrato);
+[2026-07-16 01:12:50 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260715235729_InitialCreate', '8.0.8');
+[2026-07-16 01:12:55 INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:56 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-16 01:12:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:56 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-16 01:12:56 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-16 01:12:56 INF] No migrations were applied. The database is already up to date.
+[2026-07-16 01:12:56 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+[2026-07-16 01:12:56 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2026-07-16 01:12:56 INF] Creating key {ce900602-7c31-4229-a0f6-fe328af00a53} with creation date 2026-07-16 01:12:56Z, activation date 2026-07-16 01:12:56Z, and expiration date 2026-10-14 01:12:56Z.
+[2026-07-16 01:12:56 WRN] No XML encryptor configured. Key {ce900602-7c31-4229-a0f6-fe328af00a53} may be persisted to storage in unencrypted form.
+[2026-07-16 01:12:56 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-ce900602-7c31-4229-a0f6-fe328af00a53.xml'.
+[2026-07-16 01:12:56 INF] Now listening on: http://[::]:8080
+[2026-07-16 01:12:56 INF] Application started. Press Ctrl+C to shut down.
+[2026-07-16 01:12:56 INF] Hosting environment: Development
+[2026-07-16 01:12:56 INF] Content root path: /app
+[2026-07-16 01:13:07 INF] Request starting HTTP/1.1 GET http://localhost:8080/index.html - null null
+[2026-07-16 01:13:07 INF] Request finished HTTP/1.1 GET http://localhost:8080/index.html - 200 null text/html;charset=utf-8 61.9826ms
+[2026-07-16 01:13:07 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - null null
+[2026-07-16 01:13:07 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 82.3342ms
+[2026-07-16 01:13:20 INF] Request starting HTTP/1.1 POST http://localhost:8080/api/Contratos - application/json 223
+[2026-07-16 01:13:20 INF] HTTP POST /api/Contratos started | CorrelationId=55c8cb96ec94477780ee11d927e0bb38
+[2026-07-16 01:13:20 WRN] Failed to determine the https port for redirect.
+[2026-07-16 01:13:20 INF] CORS policy execution successful.
+[2026-07-16 01:13:20 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS)'
+[2026-07-16 01:13:20 INF] Route matched with {action = "CriarContrato", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ContratoResponse]] CriarContrato(DesafioVWFS.Application.DTOs.CriarContratoRequest) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-16 01:13:20 INF] Criando novo contrato para cliente: 12345678909
+[2026-07-16 01:13:20 INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO tb_contratos (id_contrato, fl_ativo, nr_cpf_cnpj_cliente, tp_condicao_veiculo, dh_atualizacao, dh_criacao, dt_vencimento_primeira_parcela, qt_prazo_meses, pc_taxa_mensal, tp_veiculo, vl_total)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-07-16 01:13:20 INF] Executing CreatedAtActionResult, writing value of type 'DesafioVWFS.Application.DTOs.ContratoResponse'.
+[2026-07-16 01:13:20 INF] Executed action DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS) in 245.5837ms
+[2026-07-16 01:13:20 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS)'
+[2026-07-16 01:13:20 INF] HTTP POST /api/Contratos responded 201 in 274.8450 ms | CorrelationId=55c8cb96ec94477780ee11d927e0bb38
+[2026-07-16 01:13:20 INF] Request finished HTTP/1.1 POST http://localhost:8080/api/Contratos - 201 null application/json; charset=utf-8 291.3571ms
+[2026-07-16 01:13:37 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/clientes/12345678909/resumo - null null
+[2026-07-16 01:13:37 INF] HTTP GET /api/clientes/12345678909/resumo started | CorrelationId=abd781f14fa74430bb2cf00f74205795
+[2026-07-16 01:13:37 INF] Executing endpoint 'DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS)'
+[2026-07-16 01:13:37 INF] Route matched with {action = "ObterResumo", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ResumoClienteResponse]] ObterResumo(System.String) on controller DesafioVWFS.Controllers.ClientesController (DesafioVWFS).
+[2026-07-16 01:13:37 INF] Obtendo resumo para cliente: 12345678909
+[2026-07-16 01:13:37 INF] Executed DbCommand (2ms) [Parameters=[@__cpfCnpj_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total, t0.id_pagamento, t0.vl_amortizacao, t0.id_contrato, t0.dh_criacao, t0.dt_pagamento, t0.dt_vencimento, t0.vl_juros, t0.ds_observacao, t0.vl_saldo_devedor, t0.st_pagamento, t0.vl_parcela
+FROM tb_contratos AS t
+LEFT JOIN tb_pagamentos AS t0 ON t.id_contrato = t0.id_contrato
+WHERE t.nr_cpf_cnpj_cliente = @__cpfCnpj_0 AND t.fl_ativo
+ORDER BY t.id_contrato
+[2026-07-16 01:13:37 INF] Executing OkObjectResult, writing value of type 'DesafioVWFS.Application.DTOs.ResumoClienteResponse'.
+[2026-07-16 01:13:37 INF] Executed action DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS) in 265.9653ms
+[2026-07-16 01:13:37 INF] Executed endpoint 'DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS)'
+[2026-07-16 01:13:37 INF] HTTP GET /api/clientes/12345678909/resumo responded 200 in 282.1508 ms | CorrelationId=abd781f14fa74430bb2cf00f74205795
+[2026-07-16 01:13:37 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/clientes/12345678909/resumo - 200 null application/json; charset=utf-8 287.3031ms
+[2026-07-16 18:12:48 INF] Application is shutting down...

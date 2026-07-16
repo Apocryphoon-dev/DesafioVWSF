@@ -1,0 +1,37 @@
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: desafio
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/app/logs
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Default=Host=db;Port=5432;Database=desafio;Username=postgres;Password=postgres
+
+  migrator:
+    image: mcr.microsoft.com/dotnet/sdk:10.0
+    depends_on:
+      - db
+    volumes:
+      - .:/src
+    working_dir: /src
+    entrypoint: ["bash", "-lc", "/usr/share/dotnet/dotnet tool install --global dotnet-ef --version 8.* && /usr/share/dotnet/dotnet restore && /root/.dotnet/tools/dotnet-ef database update --project DesafioVWFS.csproj --no-build"]
+
+volumes:
+  pgdata:
