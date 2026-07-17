@@ -44,14 +44,16 @@ public class CreateContractUseCase : UseCaseHandlerBase<CreateContractInput, Cre
             return output;
         }
 
+        var cpfCnpjNormalizado = CpfCnpjValidator.NormalizarCpfCnpj(input.ClienteCpfCnpj);
+
         var entity = new Contrato
         {
             Id = Guid.NewGuid(),
-            ClienteCpfCnpj = input.ClienteCpfCnpj,
+            ClienteCpfCnpj = cpfCnpjNormalizado,
             ValorTotal = input.ValorTotal,
             TaxaMensal = input.TaxaMensal,
             PrazoMeses = input.PrazoMeses,
-            DataVencimentoPrimeiraParcela = input.DataVencimentoPrimeiraParcela,
+            DataVencimentoPrimeiraParcela = DateTimeUtcNormalizer.Normalize(input.DataVencimentoPrimeiraParcela),
             TipoVeiculo = tipoVeiculo,
             CondicaoVeiculo = condicaoVeiculo,
             DataCriacao = DateTime.UtcNow,
@@ -62,7 +64,7 @@ public class CreateContractUseCase : UseCaseHandlerBase<CreateContractInput, Cre
         output.AddResult(new CreateContractOutput
         {
             Id = created.Id,
-            ClienteCpfCnpj = created.ClienteCpfCnpj,
+            ClienteCpfCnpj = CpfCnpjValidator.FormatarCpfCnpj(created.ClienteCpfCnpj),
             ValorTotal = created.ValorTotal,
             TaxaMensal = created.TaxaMensal,
             PrazoMeses = created.PrazoMeses,

@@ -7,6 +7,7 @@ using DesafioVWFS.Application.Features.Contracts.GetContract.Models;
 using DesafioVWFS.Application.Features.Contracts.GetContract.UseCase;
 using DesafioVWFS.Application.Features.Contracts.ListContracts.Handlers;
 using DesafioVWFS.Application.Features.Contracts.ListContracts.Models;
+using DesafioVWFS.Application.Validators;
 
 namespace DesafioVWFS.Application.Features.Contracts;
 
@@ -47,7 +48,7 @@ public class ContractsApplicationService : IContractsApplicationService
         return new ContratoResponse
         {
             Id = result.Id,
-            ClienteCpfCnpj = result.ClienteCpfCnpj,
+            ClienteCpfCnpj = CpfCnpjValidator.FormatarCpfCnpj(result.ClienteCpfCnpj),
             ValorTotal = result.ValorTotal,
             TaxaMensal = result.TaxaMensal,
             PrazoMeses = result.PrazoMeses,
@@ -74,7 +75,7 @@ public class ContractsApplicationService : IContractsApplicationService
         return result.Contratos.Select(c => new ListaContratoResponse
         {
             Id = c.Id,
-            ClienteCpfCnpj = c.ClienteCpfCnpj,
+            ClienteCpfCnpj = CpfCnpjValidator.FormatarCpfCnpj(c.ClienteCpfCnpj),
             ValorTotal = c.ValorTotal,
             SaldoDevedor = c.SaldoDevedor,
             Ativo = c.Ativo,
@@ -102,7 +103,7 @@ public class ContractsApplicationService : IContractsApplicationService
         return new ContratoResponse
         {
             Id = result.Id,
-            ClienteCpfCnpj = result.ClienteCpfCnpj,
+            ClienteCpfCnpj = CpfCnpjValidator.FormatarCpfCnpj(result.ClienteCpfCnpj),
             ValorTotal = result.ValorTotal,
             TaxaMensal = result.TaxaMensal,
             PrazoMeses = result.PrazoMeses,

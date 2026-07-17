@@ -1,0 +1,347 @@
+[2026-07-17 15:58:31 INF] Executed DbCommand (48ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:31 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 15:58:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:31 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:31 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 15:58:31 INF] No migrations were applied. The database is already up to date.
+[2026-07-17 15:58:31 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+[2026-07-17 15:58:31 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2026-07-17 15:58:31 INF] Creating key {771a1649-1ea0-493a-b6cf-a922ba988b0a} with creation date 2026-07-17 15:58:31Z, activation date 2026-07-17 15:58:31Z, and expiration date 2026-10-15 15:58:31Z.
+[2026-07-17 15:58:31 WRN] No XML encryptor configured. Key {771a1649-1ea0-493a-b6cf-a922ba988b0a} may be persisted to storage in unencrypted form.
+[2026-07-17 15:58:31 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-771a1649-1ea0-493a-b6cf-a922ba988b0a.xml'.
+[2026-07-17 15:58:31 INF] Now listening on: http://[::]:8080
+[2026-07-17 15:58:32 INF] Application started. Press Ctrl+C to shut down.
+[2026-07-17 15:58:32 INF] Hosting environment: Development
+[2026-07-17 15:58:32 INF] Content root path: /app
+[2026-07-17 15:58:55 INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:55 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 15:58:55 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:55 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 15:58:55 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 15:58:55 INF] No migrations were applied. The database is already up to date.
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/ - null null
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/ - 301 0 null 36.3204ms
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/index.html - null null
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/index.html - 200 null text/html;charset=utf-8 52.9337ms
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger-ui.css - null null
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger-ui-bundle.js - null null
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger-ui-standalone-preset.js - null null
+[2026-07-17 16:01:03 INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2026-07-17 16:01:03 INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2026-07-17 16:01:03 INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger-ui-standalone-preset.js - 200 230280 text/javascript 21.2776ms
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger-ui.css - 200 152034 text/css 23.6367ms
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger-ui-bundle.js - 200 1456926 text/javascript 23.6854ms
+[2026-07-17 16:01:03 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - null null
+[2026-07-17 16:01:03 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.463ms
+[2026-07-17 16:01:23 INF] Request starting HTTP/1.1 GET http://localhost:8080/ - null null
+[2026-07-17 16:01:23 INF] Request finished HTTP/1.1 GET http://localhost:8080/ - 301 0 null 2.8755ms
+[2026-07-17 16:01:23 INF] Request starting HTTP/1.1 GET http://localhost:8080/index.html - null null
+[2026-07-17 16:01:23 INF] Request finished HTTP/1.1 GET http://localhost:8080/index.html - 200 null text/html;charset=utf-8 1.9554ms
+[2026-07-17 16:01:23 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - null null
+[2026-07-17 16:01:23 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.9229ms[2026-07-17 16:17:07 INF] Application is shutting down...
+[2026-07-17 16:17:09 INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:09 INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 16:17:09 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:09 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:09 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 16:17:09 INF] No migrations were applied. The database is already up to date.
+[2026-07-17 16:17:09 WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+[2026-07-17 16:17:09 INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+[2026-07-17 16:17:09 INF] Creating key {f6d3ddde-7464-4b55-91cf-fec6bc97d264} with creation date 2026-07-17 16:17:09Z, activation date 2026-07-17 16:17:09Z, and expiration date 2026-10-15 16:17:09Z.
+[2026-07-17 16:17:09 WRN] No XML encryptor configured. Key {f6d3ddde-7464-4b55-91cf-fec6bc97d264} may be persisted to storage in unencrypted form.
+[2026-07-17 16:17:09 INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-f6d3ddde-7464-4b55-91cf-fec6bc97d264.xml'.
+[2026-07-17 16:17:09 INF] Now listening on: http://[::]:8080
+[2026-07-17 16:17:09 INF] Application started. Press Ctrl+C to shut down.
+[2026-07-17 16:17:09 INF] Hosting environment: Development
+[2026-07-17 16:17:09 INF] Content root path: /app
+[2026-07-17 16:17:22 INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:22 INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 16:17:22 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:22 INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+[2026-07-17 16:17:22 INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+[2026-07-17 16:17:22 INF] No migrations were applied. The database is already up to date.
+[2026-07-17 16:18:26 INF] Request starting HTTP/1.1 GET http://localhost:8080/index.html - null null
+[2026-07-17 16:18:26 INF] Request finished HTTP/1.1 GET http://localhost:8080/index.html - 200 null text/html;charset=utf-8 92.2312ms
+[2026-07-17 16:18:26 INF] Request starting HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - null null
+[2026-07-17 16:18:26 INF] Request finished HTTP/1.1 GET http://localhost:8080/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.3317ms
+[2026-07-17 16:18:36 INF] Request starting HTTP/1.1 POST http://localhost:8080/api/Contratos - application/json 214
+[2026-07-17 16:18:36 INF] HTTP POST /api/Contratos started | CorrelationId=9f8009908ab84fb281a8fd89c7af6b87
+[2026-07-17 16:18:36 WRN] Failed to determine the https port for redirect.
+[2026-07-17 16:18:36 INF] CORS policy execution successful.
+[2026-07-17 16:18:36 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS)'
+[2026-07-17 16:18:36 INF] Route matched with {action = "CriarContrato", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ContratoResponse]] CriarContrato(DesafioVWFS.Application.DTOs.CriarContratoRequest) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:18:37 INF] Criando novo contrato para cliente: 529.982.247-25
+[2026-07-17 16:18:37 INF] Executed DbCommand (44ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = DateTime), @p7='?' (DbType = Int32), @p8='?' (DbType = Decimal), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO tb_contratos (id_contrato, fl_ativo, nr_cpf_cnpj_cliente, tp_condicao_veiculo, dh_atualizacao, dh_criacao, dt_vencimento_primeira_parcela, qt_prazo_meses, pc_taxa_mensal, tp_veiculo, vl_total)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-07-17 16:18:37 INF] Executing CreatedAtActionResult, writing value of type 'DesafioVWFS.Application.DTOs.ContratoResponse'.
+[2026-07-17 16:18:37 INF] Executed action DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS) in 328.175ms
+[2026-07-17 16:18:37 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.CriarContrato (DesafioVWFS)'
+[2026-07-17 16:18:37 INF] HTTP POST /api/Contratos responded 201 in 369.5722 ms | CorrelationId=9f8009908ab84fb281a8fd89c7af6b87
+[2026-07-17 16:18:37 INF] Request finished HTTP/1.1 POST http://localhost:8080/api/Contratos - 201 null application/json; charset=utf-8 390.5892ms
+[2026-07-17 16:19:14 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/clientes/529.982.247-25/resumo - null null
+[2026-07-17 16:19:14 INF] HTTP GET /api/clientes/529.982.247-25/resumo started | CorrelationId=3ddb1caee9be47dc9928df1c1ecd3392
+[2026-07-17 16:19:14 INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+[2026-07-17 16:19:14 INF] AuthenticationScheme: FixedToken was challenged.
+[2026-07-17 16:19:14 INF] HTTP GET /api/clientes/529.982.247-25/resumo responded 401 in 8.7590 ms | CorrelationId=3ddb1caee9be47dc9928df1c1ecd3392
+[2026-07-17 16:19:14 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/clientes/529.982.247-25/resumo - 401 0 null 13.0114ms
+[2026-07-17 16:19:22 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/clientes/529.982.247-25/resumo - null null
+[2026-07-17 16:19:22 INF] HTTP GET /api/clientes/529.982.247-25/resumo started | CorrelationId=80b892209e6f4e3283931553fd50c123
+[2026-07-17 16:19:22 INF] Executing endpoint 'DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS)'
+[2026-07-17 16:19:22 INF] Route matched with {action = "ObterResumo", controller = "Clientes"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ResumoClienteResponse]] ObterResumo(System.String) on controller DesafioVWFS.Controllers.ClientesController (DesafioVWFS).
+[2026-07-17 16:19:22 INF] Obtendo resumo para cliente: 529.982.247-25
+[2026-07-17 16:19:22 INF] Executed DbCommand (22ms) [Parameters=[@__cpfCnpj_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total, t0.id_pagamento, t0.vl_amortizacao, t0.id_contrato, t0.dh_criacao, t0.dt_pagamento, t0.dt_vencimento, t0.vl_juros, t0.ds_observacao, t0.vl_saldo_devedor, t0.st_pagamento, t0.vl_parcela
+FROM tb_contratos AS t
+LEFT JOIN tb_pagamentos AS t0 ON t.id_contrato = t0.id_contrato
+WHERE t.nr_cpf_cnpj_cliente = @__cpfCnpj_0 AND t.fl_ativo
+ORDER BY t.id_contrato
+[2026-07-17 16:19:22 INF] Executing OkObjectResult, writing value of type 'DesafioVWFS.Application.DTOs.ResumoClienteResponse'.
+[2026-07-17 16:19:22 INF] Executed action DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS) in 374.3065ms
+[2026-07-17 16:19:22 INF] Executed endpoint 'DesafioVWFS.Controllers.ClientesController.ObterResumo (DesafioVWFS)'
+[2026-07-17 16:19:22 INF] HTTP GET /api/clientes/529.982.247-25/resumo responded 200 in 388.7206 ms | CorrelationId=80b892209e6f4e3283931553fd50c123
+[2026-07-17 16:19:22 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/clientes/529.982.247-25/resumo - 200 null application/json; charset=utf-8 392.5511ms
+[2026-07-17 16:19:43 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - null null
+[2026-07-17 16:19:43 INF] HTTP GET /api/Contratos started | CorrelationId=4ace2db0ffd841c3bd499f4d1c777030
+[2026-07-17 16:19:43 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:19:43 INF] Route matched with {action = "ListarContratos", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[DesafioVWFS.Application.DTOs.ListaContratoResponse]]] ListarContratos(Int32, Int32, Boolean) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:19:43 INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.fl_ativo
+    ORDER BY t.dh_criacao
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.dh_criacao, t0.id_contrato
+[2026-07-17 16:19:43 INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DesafioVWFS.Application.DTOs.ListaContratoResponse, DesafioVWFS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2026-07-17 16:19:43 INF] Executed action DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS) in 36.2938ms
+[2026-07-17 16:19:43 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:19:43 INF] HTTP GET /api/Contratos responded 200 in 45.9049 ms | CorrelationId=4ace2db0ffd841c3bd499f4d1c777030
+[2026-07-17 16:19:43 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - 200 null application/json; charset=utf-8 49.6424ms
+[2026-07-17 16:20:10 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 - null null
+[2026-07-17 16:20:10 INF] HTTP GET /api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 started | CorrelationId=0f40a2812fdf4d13af56ae87159c0b88
+[2026-07-17 16:20:10 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS)'
+[2026-07-17 16:20:10 INF] Route matched with {action = "ObterContrato", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ContratoResponse]] ObterContrato(System.Guid) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:20:10 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.id_contrato = @__id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.id_contrato
+[2026-07-17 16:20:10 INF] Executing OkObjectResult, writing value of type 'DesafioVWFS.Application.DTOs.ContratoResponse'.
+[2026-07-17 16:20:10 INF] Executed action DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS) in 22.6785ms
+[2026-07-17 16:20:10 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS)'
+[2026-07-17 16:20:10 INF] HTTP GET /api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 responded 200 in 37.5320 ms | CorrelationId=0f40a2812fdf4d13af56ae87159c0b88
+[2026-07-17 16:20:10 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 - 200 null application/json; charset=utf-8 40.7391ms
+[2026-07-17 16:20:41 INF] Request starting HTTP/1.1 DELETE http://localhost:8080/api/Contratos/2da038b1-a1ab-4a9b-b2d4-b72c7b623c7e - null null
+[2026-07-17 16:20:41 INF] HTTP DELETE /api/Contratos/2da038b1-a1ab-4a9b-b2d4-b72c7b623c7e started | CorrelationId=5c88be8e918648f3a6b0f8530aebf1dc
+[2026-07-17 16:20:41 INF] CORS policy execution successful.
+[2026-07-17 16:20:41 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.DeletarContrato (DesafioVWFS)'
+[2026-07-17 16:20:41 INF] Route matched with {action = "DeletarContrato", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletarContrato(System.Guid) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:20:41 INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+FROM tb_contratos AS t
+WHERE t.id_contrato = @__get_Item_0
+LIMIT 1
+[2026-07-17 16:20:41 INF] Executed DbCommand (23ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?' (DbType = Boolean), @p1='?', @p2='?' (DbType = Int32), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Int32), @p7='?' (DbType = Decimal), @p8='?' (DbType = Int32), @p9='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+UPDATE tb_contratos SET fl_ativo = @p0, nr_cpf_cnpj_cliente = @p1, tp_condicao_veiculo = @p2, dh_atualizacao = @p3, dh_criacao = @p4, dt_vencimento_primeira_parcela = @p5, qt_prazo_meses = @p6, pc_taxa_mensal = @p7, tp_veiculo = @p8, vl_total = @p9
+WHERE id_contrato = @p10;
+[2026-07-17 16:20:41 INF] Contrato deletado: "2da038b1-a1ab-4a9b-b2d4-b72c7b623c7e"
+[2026-07-17 16:20:41 INF] Executing StatusCodeResult, setting HTTP status code 204
+[2026-07-17 16:20:41 INF] Executed action DesafioVWFS.Controllers.ContratosController.DeletarContrato (DesafioVWFS) in 51.639ms
+[2026-07-17 16:20:41 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.DeletarContrato (DesafioVWFS)'
+[2026-07-17 16:20:41 INF] HTTP DELETE /api/Contratos/2da038b1-a1ab-4a9b-b2d4-b72c7b623c7e responded 204 in 62.4209 ms | CorrelationId=5c88be8e918648f3a6b0f8530aebf1dc
+[2026-07-17 16:20:41 INF] Request finished HTTP/1.1 DELETE http://localhost:8080/api/Contratos/2da038b1-a1ab-4a9b-b2d4-b72c7b623c7e - 204 null null 65.9568ms
+[2026-07-17 16:20:52 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - null null
+[2026-07-17 16:20:52 INF] HTTP GET /api/Contratos started | CorrelationId=29dbc65161764e80ae930aabc6d44656
+[2026-07-17 16:20:52 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:20:52 INF] Route matched with {action = "ListarContratos", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[DesafioVWFS.Application.DTOs.ListaContratoResponse]]] ListarContratos(Int32, Int32, Boolean) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:20:52 INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.fl_ativo
+    ORDER BY t.dh_criacao
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.dh_criacao, t0.id_contrato
+[2026-07-17 16:20:52 INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DesafioVWFS.Application.DTOs.ListaContratoResponse, DesafioVWFS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2026-07-17 16:20:52 INF] Executed action DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS) in 9.0918ms
+[2026-07-17 16:20:52 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:20:52 INF] HTTP GET /api/Contratos responded 200 in 15.9871 ms | CorrelationId=29dbc65161764e80ae930aabc6d44656
+[2026-07-17 16:20:52 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - 200 null application/json; charset=utf-8 19.9983ms
+[2026-07-17 16:21:57 INF] Request starting HTTP/1.1 POST http://localhost:8080/api/contratos/acf51b39-d520-4421-9d34-1be95b0accc3/pagamentos - application/json 162
+[2026-07-17 16:21:57 INF] HTTP POST /api/contratos/acf51b39-d520-4421-9d34-1be95b0accc3/pagamentos started | CorrelationId=d82ae8ed9b0b4d059f1603b7758c26b0
+[2026-07-17 16:21:57 INF] CORS policy execution successful.
+[2026-07-17 16:21:57 INF] Executing endpoint 'DesafioVWFS.Controllers.PagamentosController.RegistrarPagamento (DesafioVWFS)'
+[2026-07-17 16:21:57 INF] Route matched with {action = "RegistrarPagamento", controller = "Pagamentos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.PagamentoResponse]] RegistrarPagamento(System.Guid, DesafioVWFS.Application.DTOs.RegistrarPagamentoRequest) on controller DesafioVWFS.Controllers.PagamentosController (DesafioVWFS).
+[2026-07-17 16:21:57 INF] Registrando pagamento para contrato: "acf51b39-d520-4421-9d34-1be95b0accc3"
+[2026-07-17 16:21:57 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.id_contrato = @__id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.id_contrato
+[2026-07-17 16:21:57 INF] Executed DbCommand (1ms) [Parameters=[@__contratoId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t.id_pagamento, t.vl_amortizacao, t.id_contrato, t.dh_criacao, t.dt_pagamento, t.dt_vencimento, t.vl_juros, t.ds_observacao, t.vl_saldo_devedor, t.st_pagamento, t.vl_parcela
+FROM tb_pagamentos AS t
+WHERE t.id_contrato = @__contratoId_0
+ORDER BY t.dt_vencimento
+[2026-07-17 16:21:57 INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Decimal), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?' (DbType = Decimal), @p7='?', @p8='?' (DbType = Decimal), @p9='?' (DbType = Int32), @p10='?' (DbType = Decimal)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO tb_pagamentos (id_pagamento, vl_amortizacao, id_contrato, dh_criacao, dt_pagamento, dt_vencimento, vl_juros, ds_observacao, vl_saldo_devedor, st_pagamento, vl_parcela)
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+[2026-07-17 16:21:57 INF] Executing CreatedAtActionResult, writing value of type 'DesafioVWFS.Application.DTOs.PagamentoResponse'.
+[2026-07-17 16:21:57 INF] Executed action DesafioVWFS.Controllers.PagamentosController.RegistrarPagamento (DesafioVWFS) in 91.7981ms
+[2026-07-17 16:21:57 INF] Executed endpoint 'DesafioVWFS.Controllers.PagamentosController.RegistrarPagamento (DesafioVWFS)'
+[2026-07-17 16:21:57 INF] HTTP POST /api/contratos/acf51b39-d520-4421-9d34-1be95b0accc3/pagamentos responded 201 in 106.3631 ms | CorrelationId=d82ae8ed9b0b4d059f1603b7758c26b0
+[2026-07-17 16:21:57 INF] Request finished HTTP/1.1 POST http://localhost:8080/api/contratos/acf51b39-d520-4421-9d34-1be95b0accc3/pagamentos - 201 null application/json; charset=utf-8 116.087ms
+[2026-07-17 16:22:12 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - null null
+[2026-07-17 16:22:12 INF] HTTP GET /api/Contratos started | CorrelationId=694493e08810427ba4351e29ffc3cf39
+[2026-07-17 16:22:12 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:22:12 INF] Route matched with {action = "ListarContratos", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[DesafioVWFS.Application.DTOs.ListaContratoResponse]]] ListarContratos(Int32, Int32, Boolean) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:22:13 INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.fl_ativo
+    ORDER BY t.dh_criacao
+    LIMIT @__p_1 OFFSET @__p_0
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.dh_criacao, t0.id_contrato
+[2026-07-17 16:22:13 INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DesafioVWFS.Application.DTOs.ListaContratoResponse, DesafioVWFS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2026-07-17 16:22:13 INF] Executed action DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS) in 38.8169ms
+[2026-07-17 16:22:13 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.ListarContratos (DesafioVWFS)'
+[2026-07-17 16:22:13 INF] HTTP GET /api/Contratos responded 200 in 42.9770 ms | CorrelationId=694493e08810427ba4351e29ffc3cf39
+[2026-07-17 16:22:13 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/Contratos?page=1&pageSize=10&ordenarDescendente=false - 200 null application/json; charset=utf-8 47.0618ms
+[2026-07-17 16:22:20 INF] Request starting HTTP/1.1 GET http://localhost:8080/api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 - null null
+[2026-07-17 16:22:20 INF] HTTP GET /api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 started | CorrelationId=0bae5f6f9f0a44be982e16cce27ef057
+[2026-07-17 16:22:20 INF] Executing endpoint 'DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS)'
+[2026-07-17 16:22:20 INF] Route matched with {action = "ObterContrato", controller = "Contratos"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[DesafioVWFS.Application.DTOs.ContratoResponse]] ObterContrato(System.Guid) on controller DesafioVWFS.Controllers.ContratosController (DesafioVWFS).
+[2026-07-17 16:22:20 INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t0.id_contrato, t0.fl_ativo, t0.nr_cpf_cnpj_cliente, t0.tp_condicao_veiculo, t0.dh_atualizacao, t0.dh_criacao, t0.dt_vencimento_primeira_parcela, t0.qt_prazo_meses, t0.pc_taxa_mensal, t0.tp_veiculo, t0.vl_total, t1.id_pagamento, t1.vl_amortizacao, t1.id_contrato, t1.dh_criacao, t1.dt_pagamento, t1.dt_vencimento, t1.vl_juros, t1.ds_observacao, t1.vl_saldo_devedor, t1.st_pagamento, t1.vl_parcela
+FROM (
+    SELECT t.id_contrato, t.fl_ativo, t.nr_cpf_cnpj_cliente, t.tp_condicao_veiculo, t.dh_atualizacao, t.dh_criacao, t.dt_vencimento_primeira_parcela, t.qt_prazo_meses, t.pc_taxa_mensal, t.tp_veiculo, t.vl_total
+    FROM tb_contratos AS t
+    WHERE t.id_contrato = @__id_0
+    LIMIT 1
+) AS t0
+LEFT JOIN tb_pagamentos AS t1 ON t0.id_contrato = t1.id_contrato
+ORDER BY t0.id_contrato
+[2026-07-17 16:22:20 INF] Executing OkObjectResult, writing value of type 'DesafioVWFS.Application.DTOs.ContratoResponse'.
+[2026-07-17 16:22:20 INF] Executed action DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS) in 6.1645ms
+[2026-07-17 16:22:20 INF] Executed endpoint 'DesafioVWFS.Controllers.ContratosController.ObterContrato (DesafioVWFS)'
+[2026-07-17 16:22:20 INF] HTTP GET /api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 responded 200 in 9.9597 ms | CorrelationId=0bae5f6f9f0a44be982e16cce27ef057
+[2026-07-17 16:22:20 INF] Request finished HTTP/1.1 GET http://localhost:8080/api/Contratos/acf51b39-d520-4421-9d34-1be95b0accc3 - 200 null application/json; charset=utf-8 13.2701ms

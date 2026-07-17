@@ -32,7 +32,9 @@ public class GetSummaryUseCase : UseCaseHandlerBase<GetSummaryInput, GetSummaryO
             return output;
         }
 
-        var contratos = await _contratoRepository.ObterPorClienteAsync(input.CpfCnpj);
+        var cpfCnpjNormalizado = CpfCnpjValidator.NormalizarCpfCnpj(input.CpfCnpj);
+
+        var contratos = await _contratoRepository.ObterPorClienteAsync(cpfCnpjNormalizado);
 
         if (!contratos.Any())
         {
@@ -56,7 +58,7 @@ public class GetSummaryUseCase : UseCaseHandlerBase<GetSummaryInput, GetSummaryO
 
         output.AddResult(new GetSummaryOutput
         {
-            ClienteCpfCnpj = input.CpfCnpj,
+            ClienteCpfCnpj = CpfCnpjValidator.FormatarCpfCnpj(cpfCnpjNormalizado),
             ContratosAtivos = contratosAtivos,
             TotalParcelas = totalParcelas,
             ParcelasPagas = parcelasPagas,

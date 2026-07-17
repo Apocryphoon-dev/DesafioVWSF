@@ -48,10 +48,10 @@ public class InsertPaymentUseCase : UseCaseHandlerBase<InsertPaymentInput, Inser
         var pagamento = _calculoService.CalcularParcela(contrato, pagamentosExistentes, dataVencimentoAnterior);
 
         if (input.DataVencimento != default)
-            pagamento.DataVencimento = input.DataVencimento;
+            pagamento.DataVencimento = DateTimeUtcNormalizer.Normalize(input.DataVencimento);
 
         if (input.DataPagamento.HasValue)
-            pagamento.DataPagamento = input.DataPagamento;
+            pagamento.DataPagamento = DateTimeUtcNormalizer.Normalize(input.DataPagamento);
 
         if (!string.IsNullOrWhiteSpace(input.Observacoes))
             pagamento.Observacoes = input.Observacoes;

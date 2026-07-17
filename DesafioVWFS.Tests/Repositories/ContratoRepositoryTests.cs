@@ -25,6 +25,25 @@ public class ContratoRepositoryTests
     }
 
     [Fact]
+    public async Task ObterPorClienteAsync_DeveConsiderarCpfComOuSemMascara()
+    {
+        await using var context = DefaultFixture.CreateInMemoryContext();
+
+        var contratoComMascara = DefaultFixture.CreateContrato("529.982.247-25", ativo: true);
+        var contratoOutroCliente = DefaultFixture.CreateContrato("111.444.777-35", ativo: true);
+
+        context.Contratos.AddRange(contratoComMascara, contratoOutroCliente);
+        await context.SaveChangesAsync();
+
+        var repository = new ContratoRepository(context);
+
+        var result = await repository.ObterPorClienteAsync("52998224725");
+
+        Assert.Single(result);
+        Assert.Equal(contratoComMascara.Id, result.Single().Id);
+    }
+
+    [Fact]
     public async Task DeletarAsync_DeveMarcarContratoComoInativo()
     {
         await using var context = DefaultFixture.CreateInMemoryContext();

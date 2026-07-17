@@ -65,17 +65,6 @@ Após subir, acesse o Swagger em:
 http://localhost:8080/
 ```
 
-### Executando localmente (sem Docker)
-
-```bash
-cd DesafioVWFS
-dotnet restore
-dotnet ef database update
-dotnet run
-```
-
-> Ajuste a connection string em `appsettings.Development.json` para apontar para o seu PostgreSQL local.
-
 ## Autenticação
 
 Rotas protegidas exigem um token fixo enviado no header `Authorization`:
@@ -122,16 +111,6 @@ Valores aceitos:
 | `POST` | `/api/contratos/{contratoId}/pagamentos` | Registra o pagamento de uma parcela |
 | `GET` | `/api/contratos/{contratoId}/pagamentos` | Lista os pagamentos de um contrato |
 | `GET` | `/api/contratos/{contratoId}/pagamentos/{pagamentoId}` | Obtém um pagamento específico |
-
-Regras de negócio aplicadas:
-- O valor da parcela, juros e amortização são calculados pela tabela Price a partir do saldo devedor atual e do prazo restante.
-- O **saldo devedor** é atualizado a cada novo pagamento registrado.
-- O status do pagamento é calculado automaticamente comparando `dataPagamento` com `dataVencimento`:
-  - Sem `dataPagamento` e vencimento no futuro → `EMDIA`
-  - Sem `dataPagamento` e vencimento no passado → `ATRASADO`
-  - `dataPagamento` após o vencimento → `ATRASADO`
-  - `dataPagamento` antes do vencimento → `ANTECIPADO`
-  - `dataPagamento` na mesma data do vencimento → `EMDIA`
 
 ### Resumo do cliente
 

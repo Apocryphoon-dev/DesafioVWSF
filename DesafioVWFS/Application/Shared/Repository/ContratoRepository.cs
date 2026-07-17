@@ -1,4 +1,5 @@
 using DesafioVWFS.Application.Shared.Domain.Entities;
+using DesafioVWFS.Application.Validators;
 using DesafioVWFS.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,10 +23,19 @@ namespace DesafioVWFS.Application.Shared.Repository
 
         public async Task<List<Contrato>> ObterPorClienteAsync(string cpfCnpj)
         {
-            return await _context.Contratos
+            var cpfCnpjNormalizado = CpfCnpjValidator.NormalizarCpfCnpj(cpfCnpj);
+
+            if (string.IsNullOrEmpty(cpfCnpjNormalizado))
+                return new List<Contrato>();
+
+            var contratosAtivos = await _context.Contratos
                 .Include(c => c.Pagamentos)
-                .Where(c => c.ClienteCpfCnpj == cpfCnpj && c.Ativo)
+                .Where(c => c.Ativo)
                 .ToListAsync();
+
+            return contratosAtivos
+                .Where(c => CpfCnpjValidator.NormalizarCpfCnpj(c.ClienteCpfCnpj) == cpfCnpjNormalizado)
+                .ToList();
         }
 
         public async Task<List<Contrato>> ListarTodosAsync(int page = 1, int pageSize = 10, bool ordenarDescendente = false)
